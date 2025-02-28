@@ -19,167 +19,216 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
     <script src="./home.js" defer></script>
 
 </head>
 
-        <body>
-            <header>
-        
-                <div class="w-screen h-full bg-gray-100  dark:bg-gray-700">
-        
-                    <div class="container mx-auto relative md:px-0 px-4 md:my-10 bg-[#111111] dark:bg-white overflow-hidden">
-                        <!-- Nav -->
-                        <nav class="bg-[#111111] dark:bg-white shadow-lg w-full z-50">
-                            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                                <div class="flex justify-between items-center h-16">
-                                    <!-- Logo -->
-                                    <div class="flex-shrink-0">
-                                        <a href="#"
-                                            class="lg:text-xl md:text-lg text-sm font-bold text-gray-700 dark:text-white capitalize">
-                                            <span
-                                                class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_1.9s_linear_infinite]">S</span>
-                                            <span
-                                                class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2s_linear_infinite]">t</span>
-                                            <span
-                                                class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.1s_linear_infinite]">e</span>
-                                            <span
-                                                class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.21s_linear_infinite]">p</span>
-                                            <span
-                                                class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.3s_linear_infinite]">h</span>
-                                            <span
-                                                class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.4s_linear_infinite]">e</span>
-                                            <span
-                                                class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.4s_linear_infinite]">n</span>
-                                        </a>
+<body>
+    <header>
+
+        <div class="w-screen h-full bg-gray-100  dark:bg-gray-700">
+
+            <div class="container mx-auto relative md:px-0 px-4 md:my-10 bg-[#111111] dark:bg-white overflow-hidden">
+                <!-- Nav -->
+                <nav class="bg-[#111111] dark:bg-white shadow-lg w-full z-50">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex justify-between items-center h-16">
+                            <!-- Logo -->
+                            <div class="flex-shrink-0">
+                                <a href="./index.html"
+                                    class="lg:text-xl md:text-lg text-sm font-bold text-gray-700 dark:text-white capitalize">
+                                    <span
+                                        class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_1.9s_linear_infinite]">S</span>
+                                    <span
+                                        class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2s_linear_infinite]">t</span>
+                                    <span
+                                        class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.1s_linear_infinite]">e</span>
+                                    <span
+                                        class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.21s_linear_infinite]">p</span>
+                                    <span
+                                        class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.3s_linear_infinite]">h</span>
+                                    <span
+                                        class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.4s_linear_infinite]">e</span>
+                                    <span
+                                        class="px-1 bg-green-400 dark:bg-green-600 rounded-full animate-[ping_2.4s_linear_infinite]">n</span>
+                                </a>
+                            </div>
+
+                            <!-- Desktop Menu -->
+                            <div class="hidden md:flex space-x-8 text-gray-400 dark:text-gray-700">
+                                <a href="./index.html" class="text-green-400 dark:text-green-600">Home</a>
+                                <a href="./index.html#services" class="hover:text-green-400 dark:hover:text-green-600 ">Services
+                                </a>
+                                <a href="./portfolio.html"
+                                    class="hover:text-green-400 dark:hover:text-green-600 ">Portfolio</a>
+                                <a href="./blog.html" class="hover:text-green-400 dark:hover:text-green-600 ">Blog</a>
+                                <a href="#contact" class="hover:text-green-400 dark:hover:text-green-600 ">Contact
+                                </a>
+                            </div>
+
+                            <!-- Mobile Menu Button -->
+                            <div class="md:hidden flex items-center">
+                                <button id="mobile-menu-button"
+                                    class="text-green-400 dark:text-green-600 hover:text-green-600 focus:outline-none">
+                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16m-7 6h7" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div id="mobile-menu" class="absolute inset-0 bg-[#111111] dark:bg-white bg-opacity-50 z-50 hidden">
+                        <div
+                            class="fixed inset-y-0 left-0 bg-[#111111] dark:bg-white w-64 p-6 transform -translate-x-full transition-transform">
+                            <button id="close-menu-button"
+                                class="text-green-400 dark:text-green-600 hover:text-green-600 focus:outline-none mb-4">
+                                <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            <nav class="space-y-4 text-gray-400 dark:text-gray-700">
+                                <a href="./index.html" class="block text-green-400 dark:text-green-600">Home</a>
+                                <a href="#services" class="block hover:text-green-400 dark:hover:text-green-600 ">Services
+                                    </a>
+                                <a href="./portfolio.html"
+                                    class="block hover:text-green-400 dark:hover:text-green-600 ">Portfolio</a>
+                                <a href="./blog.html"
+                                    class="block hover:text-green-400 dark:hover:text-green-600 ">Blog</a>
+                                <a href="#contact"
+                                    class="block hover:text-green-400 dark:hover:text-green-600 ">Contact
+                                </a>
+                            </nav>
+                        </div>
+                    </div>
+                </nav>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- ABOUT Section -->
+    <div class="w-full lg:h-screen h-full m-auto flex items-center justify-cetner py-20 bg-gray-50 dark:bg-gray-900">
+        <div class="w-full h-full flex flex-col justify-center items-center sm:px-4 px-2">
+            <!--  -->
+            <div class="lg:w-[90%] w-full mx-auto flex flex-col lg:gap-6 lg:flex-row items-center justify-center ">
+                <div class="relative">
+                    <!-- Side Img 1 -->
+                    <!-- <img class="absolute z-20 lg:left-[2rem] -top-4 left-[1rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" -->
+                        
+
+                    <!-- Side Img 2 -->
+                    <!-- <img class="absolute z-20 lg:top-[12rem] sm:top-[11rem] top-[5rem] sm:-left-[3rem] -left-[2rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" -->
+                        
+
+                    <!-- Side Img 3 -->
+                    <!-- <img class="absolute z-20 lg:top-[23rem] sm:top-[20.5rem] top-[10.5rem] left-[2rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" -->
+                        
+
+                    <!-- Main Img -->
+                    <img class="rounded-full relative object-cover right-0 lg:w-[37rem] lg:h-[26rem] sm:w-[25rem] sm:h-[25rem] w-[12rem] h-[12rem] outline sm:outline-offset-[.77em] outline-offset-[.37em] outline-green-500"
+                        src="./images/bg.png" alt="About us" />
+                </div>
+                <!--  -->
+
+
+                <!-- <div class="bg-gray-100 text-gray-800"> -->
+                    <!-- <div class="container mx-auto py-10 px-5"> -->
+                        <!-- <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden"> -->
+                            <div class="p-4 sm:p-6">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h2 class="text-2xl font-semibold">Stephen Appiah</h2>
+                                        <p class="text-sm text-gray-600">Junior Web Developer | Lab scientist</p>
                                     </div>
-        
-                                    <!-- Desktop Menu -->
-                                    <div class="hidden md:flex space-x-8 text-gray-400 dark:text-gray-700">
-                                        <a href="./index.html" class="text-green-400 dark:text-green-600">Home</a>
-                                        <a href="#services" class="hover:text-green-400 dark:hover:text-green-600 ">Services
-                                            </a>
-                                        <a href="./portfolio.html"
-                                            class="hover:text-green-400 dark:hover:text-green-600 ">Portfolio</a>
-                                        <a href="./blog.html" class="hover:text-green-400 dark:hover:text-green-600 ">Blog</a>
-                                        <a href="#contact" class="hover:text-green-400 dark:hover:text-green-600 ">Contact
-                                        </a>
-                                    </div>
-        
-                                    <!-- Mobile Menu Button -->
-                                    <div class="md:hidden flex items-center">
-                                        <button id="mobile-menu-button"
-                                            class="text-green-400 dark:text-green-600 hover:text-green-600 focus:outline-none">
-                                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                    d="M4 6h16M4 12h16m-7 6h7" />
-                                            </svg>
-                                        </button>
+                                    <div>
+                                        <p class="text-sm text-gray-600">Phone: (+233) 557-151636</p>
+                                        <p class="text-sm text-gray-600">Email:<a
+                                                href="mailto:steveapp531@gmail.com"> steveapp531@gmail.com</a></p>
+                                        <p class="text-sm text-gray-600">Location: Accra, GH</p>
                                     </div>
                                 </div>
-                            </div>
-        
-                            <!-- Mobile Menu -->
-                            <div id="mobile-menu" class="absolute inset-0 bg-[#111111] dark:bg-white bg-opacity-50 z-50 hidden">
-                                <div
-                                    class="fixed inset-y-0 left-0 bg-[#111111] dark:bg-white w-64 p-6 transform -translate-x-full transition-transform">
-                                    <button id="close-menu-button"
-                                        class="text-green-400 dark:text-green-600 hover:text-green-600 focus:outline-none mb-4">
-                                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M6 18L18 6M6 6l12 12" />
-                                        </svg>
-                                    </button>
-                                    <nav class="space-y-4 text-gray-400 dark:text-gray-700">
-                                        <a href="#about" class="block text-green-400 dark:text-green-600">Home</a>
-                                        <a href="#what-i-do" class="block hover:text-green-400 dark:hover:text-green-600 ">What
-                                            I Do</a>
-                                        <a href="#testimonials"
-                                            class="block hover:text-green-400 dark:hover:text-green-600 ">Portfolio</a>
-                                        <a href="./blog.html"
-                                            class="block hover:text-green-400 dark:hover:text-green-600 ">Blog</a>
-                                        <a href="#fun-facts"
-                                            class="block hover:text-green-400 dark:hover:text-green-600 ">Contact
-                                        </a>
-                                    </nav>
+                                <hr class="my-4">
+
+                                <div class="mt-4">
+                                    <h3 class="text-lg font-semibold mb-2">Experience</h3>
+                                    <div>
+                                        <h4 class="text-md font-semibold">MEST</h4>
+                                        <p class="text-sm text-gray-600">Web Development Trainee | Feb. 25 - Present</p>
+                                        <ul class="list-disc list-inside text-sm">
+                                            <li>Researched and experimented with new web development technologies to enhance skills and contribute to team projects.</li>
+                                            <li>Learned and applied version control using Git for tracking changes and collaborating with the team.</li>
+                                            <li>Developed and maintained web applications using HTML, CSS, JavaScript, and modern frameworks.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="mt-4">
+                                        <h4 class="text-md font-semibold">Projects</h4>
+                                        <a href="https://hotell-black.vercel.app/"><p class="text-sm text-gray-600">Hotell | 21 - 02 - 2025</p></a>
+                                        <ul class="list-disc list-inside text-sm">
+                                            <li>academic solo web development project:used HTML and CSS to design the page  </li>
+                                            <li>integrated JavaScript for button functionality.</li>
+                                            <li>interacted with an API, fetched data and displayed it using JavaScript.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <h3 class="text-lg font-semibold mb-2">Skills</h3>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Programming Languages: Java, Python, JavaScript</li>
+                                        <li>Frameworks & Libraries: Node.js, React, Django</li>
+                                        <li>Database Systems: MySQL, MongoDB</li>
+                                        <li>Design and Editing: Aobe Suite</li>
+                                        <li>DevOps Tools: Git, Jira</li>
+                                        <li>Lab Skills: GLP, HACCP, GMP, Instrumentation</li>
+                                    </ul>
                                 </div>
                             </div>
-                        </nav>
-        
+
+                            <button
+                                class="lg:mt-10 mt-6 lg:px-6 px-4 lg:py-4 py-2 bg-green-600 rounded-sm lg:text-xl text-lg text-white font-semibold"><a
+                                    href="./Resume1_Stephen_Appiah_Dwumfour.pdf" download="My-CV"
+                                    class="px-4 py-2 bg-green-600 text-white rounded-lg flex items-center gap-2 hover:bg-green-700 transition">
+                                    <i class="fa fa-download"></i> CV
+                                </a></button>
+
+                        </div>
+
                     </div>
                 </div>
-            </header>
 
-   <!-- ABOUT Section -->
-<div class="w-full lg:h-screen h-full m-auto flex items-center justify-cetner py-20 bg-gray-50 dark:bg-gray-900">
-    <div class="w-full h-full flex flex-col justify-center items-center sm:px-4 px-2">
-        <!--  -->
-        <div class="lg:w-[90%] w-full mx-auto flex flex-col lg:gap-6 lg:flex-row items-center justify-center ">
-            <div class="relative">
-                <!-- Side Img 1 -->
-                <img class="absolute z-20 lg:left-[2rem] -top-4 left-[1rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" src="./images/3600710.jpg" alt="Side Image" />
-
-                <!-- Side Img 2 -->
-                <img class="absolute z-20 lg:top-[12rem] sm:top-[11rem] top-[5rem] sm:-left-[3rem] -left-[2rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" src="./images/js1.jpg" alt="Side Image 2" />
-
-                <!-- Side Img 3 -->
-                <img class="absolute z-20 lg:top-[23rem] sm:top-[20.5rem] top-[10.5rem] left-[2rem] lg:w-[8rem] lg:h-[8rem] sm:w-[6rem] sm:h-[6rem] w-[3rem] h-[3rem] rounded-full" src="./images/js2.jpg" alt="Side Image 3" />
-
-                <!-- Main Img -->
-                <img
-            class="rounded-full relative object-cover right-0 lg:w-[30rem] lg:h-[30rem] sm:w-[25rem] sm:h-[25rem] w-[12rem] h-[12rem] outline sm:outline-offset-[.77em] outline-offset-[.37em] outline-green-500"
-            src="./images/bg.png" alt="About us" />
+<footer>
+    <footer class="bg-black text-green-600 py-6">
+        <div class="container  text-center">
+            <p class="text-sm">&copy; 2025 Stephen Appiah. All rights reserved.</p>
+            <div class="flex justify-center space-x-4 mt-3">
+                <a href="https://github.com/steveapp531" target="_blank">
+                    <i class="fa fa-github text-xl hover:text-gray-400 transition"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/stephenappiahdwumfour/" target="_blank">
+                    <i class="fa fa-linkedin text-xl hover:text-gray-400 transition"></i>
+                </a>
+                <a href="https://twitter.com/steveapp_" target="_blank">
+                    <i class="fa fa-twitter text-xl hover:text-gray-400 transition"></i>
+                </a>
             </div>
-            <!--  -->
-            <div
-                class="lg:w-[60%] p-4 w-full h-full shadow-xl shadow-green-300/40 flex flex-col justify-center items-center sm:px-6 px-4 rounded-xl">
-                <h2 class="text-4xl text-center text-green-600 dark:text-green-400 font-bold px-4 py-1 md:mt-0 mt-10">
-                    About Me
-                </h2>
-                <p class="md:text-3xl text-2xl text-center text-gray-800 dark:text-gray-200 font-bold my-5">Web Developer | Laboratory Scientist
-                </p>
-                <p class="md:text-xl sm:text-lg text-base mt-2 text-justify sm:px-2 dark:text-gray-300"> I bring a fresh perspective, adaptability, and a strong commitment
-                    to learning and improving every day. I am looking forward to building
-                    solutions that make a difference and grow into a full stack developer.
-                    I am passionate about creating impactful solutions and continuously
-                    enhancing my skills to stay ahead in the intersection of Science and Technology.
-                    My goal is to contribute meaningfully to projects that drive innovation
-                    and solve real-world problems. I am eager to collaborate with teams
-                    and leverage my diverse background to achieve exceptional results.
-                </p>
-
-                <button class="lg:mt-10 mt-6 lg:px-6 px-4 lg:py-4 py-2 bg-green-600 rounded-sm lg:text-xl text-lg text-white font-semibold"><a href="./Resume1_Stephen_Appiah_Dwumfour.pdf" download="My-CV" class="px-4 py-2 bg-green-600 text-white rounded-lg flex items-center gap-2 hover:bg-green-700 transition">
-                    <i class="fa fa-download"></i> CV
-                  </a></button>
-
-            </div>
-
         </div>
-    </div>
+   
 
-</div>
-
-  
+</footer>
     
 </body>
-
-<footer class="bg-black text-green-600 py-6">
-    <div class="container  text-center">
-      <p class="text-sm">&copy; 2025 Stephen Appiah. All rights reserved.</p>
-      <div class="flex justify-center space-x-4 mt-3">
-        <a href="https://github.com/steveapp531" target="_blank">
-          <i class="fa fa-github text-xl hover:text-gray-400 transition"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/stephenappiahdwumfour/" target="_blank">
-          <i class="fa fa-linkedin text-xl hover:text-gray-400 transition"></i>
-        </a>
-        <a href="https://twitter.com/steveapp_" target="_blank">
-          <i class="fa fa-twitter text-xl hover:text-gray-400 transition"></i>
-        </a>
-      </div>
-    </div>
-  </footer>
 
 </html>
