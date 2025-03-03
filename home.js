@@ -44,3 +44,10 @@ document.addEventListener("DOMContentLoaded", function () {
       console.error("Mobile menu elements not found.");
   }
 });
+
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {}
+  }
+}
