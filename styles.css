@@ -1,11 +1,11 @@
-@import linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-  url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+/* @import linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+  url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"); */
 
-  @tailwind base;
+  /* @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; */
 
-* {
+/* * { */
   /* margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -89,7 +89,7 @@ header {
   border-radius: 50px;
   overflow-y: hidden;
   clip-path: inset(0 0 21% 0 round 5% 20% 0 10%); */
-}
+/* } */
 
 /* .content {
   position: relative;
@@ -97,7 +97,7 @@ header {
   color: #000000;
   height: 50%;
   /* right: 300px; */
-}
+/* } */
 
 /* .content h2 {
   font-size: 3em;
@@ -107,7 +107,7 @@ header {
 }
 .content h4 {
   font-size: 2em; */
-}
+/* } */
 /* .content p {
   padding: 10px 0 40px 0;
 }
@@ -168,9 +168,9 @@ header {
   height: 100vh;
   width: 100vw;
   gap: 70px; */
-}
+/* } */
 
-.p {
+/* .p { */
   /* display: flex;
   text-align: center;
   flex-direction: column;
@@ -187,4 +187,4 @@ header {
   color: rgb(25, 0, 252);
   font-size: 50px; */
 
-}
+/* } */
