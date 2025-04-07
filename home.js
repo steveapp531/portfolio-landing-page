@@ -40,10 +40,10 @@ navMenu.className = `
 
 navMenu.innerHTML = `
   <a href="./index.html" class="font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition duration-300">Home</a>
-  <a href="#services" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Services</a>
+  <a href="./index.html#services" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Services</a>
   <a href="./portfolio.html" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Portfolio</a>
   <a href="./blog.html" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Blog</a>
-  <a href="#contact" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Contact</a>
+  <a href="./index.html#contact" class="font-medium hover:text-blue-600 dark:hover:text-blue-400 transition duration-300">Contact</a>
 `;
 
 // Animate with custom class
