@@ -1,28 +1,32 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const html = document.documentElement;
-    
-    // Initialize from localStorage
-    if (localStorage.getItem('theme') === 'dark') {
-      html.classList.add('dark');
-    }
-    
-    themeToggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-      updateThemeStatus();
-    });
-    
-    function updateThemeStatus() {
-      const isDark = html.classList.contains('dark');
-      document.getElementById('sun-icon').classList.toggle('hidden', !isDark);
-      document.getElementById('moon-icon').classList.toggle('hidden', isDark);
-      document.getElementById('theme-status').textContent = isDark ? 'DARK' : 'LIGHT';
-    }
-    
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggle = document.getElementById("theme-toggle");
+  const html = document.documentElement;
+
+  // Initialize from localStorage
+  if (localStorage.getItem("theme") === "dark") {
+    html.classList.add("dark");
+  }
+
+  themeToggle.addEventListener("click", () => {
+    html.classList.toggle("dark");
+    localStorage.setItem(
+      "theme",
+      html.classList.contains("dark") ? "dark" : "light"
+    );
     updateThemeStatus();
   });
 
+  function updateThemeStatus() {
+    const isDark = html.classList.contains("dark");
+    document.getElementById("sun-icon").classList.toggle("hidden", !isDark);
+    document.getElementById("moon-icon").classList.toggle("hidden", isDark);
+    document.getElementById("theme-status").textContent = isDark
+      ? "DARK"
+      : "LIGHT";
+  }
+
+  updateThemeStatus();
+});
 
 const mobileMenuBtn = document.getElementById("mobile-menu-button");
 
@@ -77,8 +81,8 @@ mobileMenuBtn.addEventListener("click", () => {
   }
 });
 
-
-console.log('Current theme:', localStorage.getItem('theme'));
-console.log('Has dark class?', document.documentElement.classList.contains('dark'));
-
-
+console.log("Current theme:", localStorage.getItem("theme"));
+console.log(
+  "Has dark class?",
+  document.documentElement.classList.contains("dark")
+);

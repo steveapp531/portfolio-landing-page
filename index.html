@@ -15,440 +15,611 @@
         href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Lexend+Deca:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap"
         rel="stylesheet">
 
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-        <script>
-          tailwind.config = {
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        tailwind.config = {
             darkMode: 'class',
-          }
-        </script>
+        }
+    </script>
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
     <script src="./home.js" defer></script>
+    <script src="./contact.js" defer></script>
 
     <!-- Add the Animation Library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-700">
     <!-- Header/Navbar -->
     <header>
-      <nav class="bg-[#111111] dark:bg-white shadow-lg w-full z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="flex justify-between items-center h-16">
-            <!-- Logo -->
-            <div class="flex-shrink-0">
-              <a href="#" class="lg:text-xl md:text-lg text-sm font-bold text-gray-700 dark:text-white capitalize">
-                <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_1.9s_linear_infinite]">S</span>
-                <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2s_linear_infinite]">t</span>
-                <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.1s_linear_infinite]">e</span>
-                <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.21s_linear_infinite]">p</span>
-                <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.3s_linear_infinite]">h</span>
-                <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">e</span>
-                <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">n</span>
-              </a>
-            </div>
-  
-            <!-- Desktop Nav -->
-            <div class="hidden md:flex space-x-8 text-gray-400 dark:text-gray-700">
-              <a href="./index.html" class="text-blue-400 dark:text-blue-600">Home</a>
-              <a href="#services" class="hover:text-blue-400 dark:hover:text-blue-600">Services</a>
-              <a href="./portfolio.html" class="hover:text-blue-400 dark:hover:text-blue-600">Portfolio</a>
-              <a href="./blog.html" class="hover:text-blue-400 dark:hover:text-blue-600">Blog</a>
-              <a href="#contact" class="hover:text-blue-400 dark:hover:text-blue-600">Contact</a>
-            </div>
-  
-            <!-- Mobile Menu Toggle -->
-            <div class="md:hidden flex items-center">
-              <button id="mobile-menu-button" class="text-blue-400 dark:text-blue-600 hover:text-blue-600 focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-                </svg>
-              </button>
-            </div>
+        <nav class="bg-[#111111] dark:bg-white shadow-lg w-full z-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <a href="#"
+                            class="lg:text-xl md:text-lg text-sm font-bold text-gray-700 dark:text-white capitalize">
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_1.9s_linear_infinite]">S</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2s_linear_infinite]">t</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.1s_linear_infinite]">e</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.21s_linear_infinite]">p</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.3s_linear_infinite]">h</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">e</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">n</span>
+                        </a>
+                    </div>
 
-            <!-- Dark/Light Mode Toggle Icon -->
-            <button id="theme-toggle" class="text-gray-500 dark:text-gray-300">
-              <!-- Sun icon for light mode, moon for dark mode -->
-              <svg id="sun-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v2m0 16v2m-7-7H2m18 0h2m-2.8-6.4l-1.4 1.4m0 12.8l1.4 1.4m-12.8 0l-1.4-1.4m0-12.8l1.4-1.4M12 5a7 7 0 100 14 7 7 0 000-14z" />
-              </svg>
-              <svg id="moon-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c1.1 0 2.08.2 3 .55 1.6 1.1 2.6 2.93 2.6 5.11 0 2.36-1.1 4.44-2.8 5.9a6.99 6.99 0 01-5.8 1.02c-2.56-1.06-4.3-3.63-4.29-6.63-.01-1.06.23-2.08.66-3 .92-1.58 2.56-2.91 4.63-2.92z" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
+                    <!-- Desktop Nav -->
+                    <div class="hidden md:flex space-x-8 text-gray-400 dark:text-gray-700">
+                        <a href="./index.html" class="text-blue-400 dark:text-blue-600">Home</a>
+                        <a href="#services" class="hover:text-blue-400 dark:hover:text-blue-600">Services</a>
+                        <a href="./portfolio.html" class="hover:text-blue-400 dark:hover:text-blue-600">Portfolio</a>
+                        <a href="./blog.html" class="hover:text-blue-400 dark:hover:text-blue-600">Blog</a>
+                        <a href="#contact" class="hover:text-blue-400 dark:hover:text-blue-600">Contact</a>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-button"
+                            class="text-blue-400 dark:text-blue-600 hover:text-blue-600 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Dark/Light Mode Toggle Icon -->
+                    <button id="theme-toggle" class="text-gray-500 dark:text-gray-300">
+                        <!-- Sun icon for light mode, moon for dark mode -->
+                        <svg id="sun-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 2v2m0 16v2m-7-7H2m18 0h2m-2.8-6.4l-1.4 1.4m0 12.8l1.4 1.4m-12.8 0l-1.4-1.4m0-12.8l1.4-1.4M12 5a7 7 0 100 14 7 7 0 000-14z" />
+                        </svg>
+                        <svg id="moon-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3c1.1 0 2.08.2 3 .55 1.6 1.1 2.6 2.93 2.6 5.11 0 2.36-1.1 4.44-2.8 5.9a6.99 6.99 0 01-5.8 1.02c-2.56-1.06-4.3-3.63-4.29-6.63-.01-1.06.23-2.08.66-3 .92-1.58 2.56-2.91 4.63-2.92z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
     </header>
-  
-<!-- Hero Section -->
-<section class="w-full bg-white dark:bg-gray-900 overflow-hidden">
-    <div class="w-full relative flex items-center justify-center min-h-[90vh] px-6 sm:px-10 lg:px-20">
-      <!-- Background Image with Overlay -->
-      <div class="absolute inset-0 z-0">
-        <img 
-          src="images/IMG_44.png" 
-          alt="Hero Background" 
-          class="w-full h-full object-cover object-center opacity-20 sm:opacity-30"
-        />
-      </div>
-  
-      <!-- Hero Content Layer -->
-      <div class="relative z-10 max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-10 py-16">
-        <!-- Left Text Section -->
-        <div class="text-black dark:text-white w-full lg:w-1/2 text-center lg:text-left">
-          <div class="inline-block">
-            <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-2 whitespace-nowrap">
-              <span class="inline">Stephen Appiah</span>
-              <span class="hidden sm:inline"> Dwumfour</span>
-            </h1>
-          </div>
-          <h2 class="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
-            Web Developer | Digital Marketer | Quality Analyst
-          </h2>
-          <p class="text-lg sm:text-xl text-gray-800 dark:text-gray-300 leading-relaxed space-y-3 mx-auto lg:mx-0 max-w-lg lg:max-w-none">
-            I build engaging websites and design strategies that help businesses grow online.
-            With a solid background in <strong>Quality Control & Lab Analysis</strong>, I'm also experienced in
-            <span class="text-blue-400 font-semibold">ISO:22000</span>, 
-            <span class="text-blue-400 font-semibold">ISO:9001</span>, 
-            and Quality Management Systems.
-          </p>
-  
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start items-center text-center lg:text-left">
-            <a href="https://www.upwork.com/freelancers/~014dcd7e6d77e79187" target="_blank">
-              <button class="px-6 py-3 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-black rounded-xl transition duration-300 shadow-md">
-                💼 Hire Me
-              </button>
-            </a>
-            <a href="./about.html">
-              <button class="px-6 py-3 text-lg font-semibold border-2 border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white rounded-xl transition duration-300 shadow-md">
-                🙋 About Me
-              </button>
-            </a>
-          </div>
-        </div>
-  
-        <!-- Right Image Section - Hidden on mobile, shown from lg breakpoint -->
-        <div class="w-full lg:w-1/2 flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
-          <div class="relative group transition-all duration-500">
-            <!-- Glowing Gradient Ring -->
-            <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-500 blur-xl opacity-30 group-hover:opacity-50 scale-110 transition duration-500 z-0"></div>
-        
-            <!-- Image Card Shadow -->
-            <div class="relative z-10 p-1 bg-white dark:bg-gray-800 rounded-full shadow-2xl transition duration-500 group-hover:shadow-blue-400">
-              <img 
-                src="images/IMG_44.png" 
-                alt="Stephen Appiah" 
-                class="w-64 sm:w-72 md:w-80 h-auto rounded-full object-cover transition-transform duration-500 transform group-hover:scale-105"
-              />
+
+    <!-- Hero Section -->
+    <section class="w-full bg-white dark:bg-gray-900 overflow-hidden">
+        <div class="w-full relative flex items-center justify-center min-h-[90vh] px-6 sm:px-10 lg:px-20">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <img src="images/IMG_44.png" alt="Hero Background"
+                    class="w-full h-full object-cover object-center opacity-20 sm:opacity-30" />
             </div>
-          </div>
+
+            <!-- Hero Content Layer -->
+            <div
+                class="relative z-10 max-w-7xl w-full flex flex-col lg:flex-row items-center justify-between gap-10 py-16">
+                <!-- Left Text Section -->
+                <div class="text-black dark:text-white w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="inline-block">
+                        <h1 class="text-4xl sm:text-5xl font-extrabold text-blue-500 mb-2 whitespace-nowrap">
+                            <span class="inline">Stephen Appiah</span>
+                            <span class="hidden sm:inline"> Dwumfour</span>
+                        </h1>
+                    </div>
+                    <h2 class="text-xl sm:text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
+                        Web Developer | Digital Marketer | Quality Analyst
+                    </h2>
+                    <p
+                        class="text-lg sm:text-xl text-gray-800 dark:text-gray-300 leading-relaxed space-y-3 mx-auto lg:mx-0 max-w-lg lg:max-w-none">
+                        I build engaging websites and design strategies that help businesses grow online.
+                        With a solid background in <strong>Quality Control & Lab Analysis</strong>, I'm also experienced
+                        in
+                        <span class="text-blue-400 font-semibold">ISO:22000</span>,
+                        <span class="text-blue-400 font-semibold">ISO:9001</span>,
+                        and Quality Management Systems.
+                    </p>
+
+                    <!-- CTA Buttons -->
+                    <div
+                        class="flex flex-col sm:flex-row gap-4 mt-8 justify-center lg:justify-start items-center text-center lg:text-left">
+                        <a href="https://www.upwork.com/freelancers/~014dcd7e6d77e79187" target="_blank">
+                            <button
+                                class="px-6 py-3 text-lg font-semibold bg-blue-500 hover:bg-blue-600 text-black rounded-xl transition duration-300 shadow-md">
+                                💼 Hire Me
+                            </button>
+                        </a>
+                        <a href="./about.html">
+                            <button
+                                class="px-6 py-3 text-lg font-semibold border-2 border-blue-500 text-blue-400 hover:bg-blue-600 hover:text-white rounded-xl transition duration-300 shadow-md">
+                                🙋 About Me
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Image Section - Hidden on mobile, shown from lg breakpoint -->
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end items-center mt-10 lg:mt-0">
+                    <div class="relative group transition-all duration-500">
+                        <!-- Glowing Gradient Ring -->
+                        <div
+                            class="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-400 via-indigo-500 to-purple-500 blur-xl opacity-30 group-hover:opacity-50 scale-110 transition duration-500 z-0">
+                        </div>
+
+                        <!-- Image Card Shadow -->
+                        <div
+                            class="relative z-10 p-1 bg-white dark:bg-gray-800 rounded-full shadow-2xl transition duration-500 group-hover:shadow-blue-400">
+                            <img src="images/IMG_44.png" alt="Stephen Appiah"
+                                class="w-64 sm:w-72 md:w-80 h-auto rounded-full object-cover transition-transform duration-500 transform group-hover:scale-105" />
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
+
+
+
+    <section
+        class="w-full h-full flex flex-col justify-center md:py-20 py-10 md:px-20 px-4 bg-gray-700 dark:bg-gray-900 overflow-hidden"
+        id="services">
+        <!-- Heading -->
+        <div class="w-fit text-center mb-10">
+            <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 dark:text-gray-200 pb-2">Services</h2>
+            <div class="w-32 h-1 mx-auto bg-gradient-to-r from-teal-400 to-indigo-500 rounded-full"></div>
+        </div>
+
+        <div class="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 mt-8">
+            <!-- Web Development -->
+            <div
+                class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-teal-600 text-white p-4 rounded-full mb-4 shadow-lg">
+                    <i class="fas fa-laptop-code text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Web Development</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-center">
+                    Building scalable, performant, and secure web applications that meet modern standards.
+                </p>
+            </div>
+
+            <!-- Graphic Design -->
+            <div
+                class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-indigo-600 text-white p-4 rounded-full mb-4 shadow-lg">
+                    <i class="fas fa-paint-brush text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Graphic Design</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-center">
+                    Designing visually engaging interfaces that balance creativity and usability.
+                </p>
+            </div>
+
+            <!-- Content Creation -->
+            <div
+                class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-blue-600 text-white p-4 rounded-full mb-4 shadow-lg">
+                    <i class="fas fa-edit text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Content Creation</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-center">
+                    Writing and creating optimized content that enhances brand presence and drives engagement.
+                </p>
+            </div>
+
+            <!-- Video Editing -->
+            <div
+                class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-purple-600 text-white p-4 rounded-full mb-4 shadow-lg">
+                    <i class="fas fa-video text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Video Editing</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-center">
+                    Editing and producing high-quality video content for various platforms.
+                </p>
+            </div>
+
+            <!-- Academic Research -->
+            <div
+                class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-orange-600 text-white p-4 rounded-full mb-4 shadow-lg">
+                    <i class="fas fa-book-reader text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Academic Research</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-center">
+                    Offering expert support and tools to enhance academic research efficiency and outcomes.
+                </p>
+            </div>
+
+            <!-- Laboratory Services -->
+            <div
+                class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
+                <div class="bg-teal-500 text-white p-4 rounded-full mb-4 shadow-lg">
+                    <i class="fas fa-flask text-3xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Laboratory Services</h3>
+                <p class="text-gray-600 dark:text-gray-400 text-center">
+                    Providing scientific research and laboratory experiment support with precision and expertise.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="about" class="bg-gray-100 dark:bg-gray-800 py-20">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <!-- Image -->
+                <div class="relative overflow-hidden rounded-lg shadow-xl">
+                    <img src="./images/about.webp" alt="Stephen Appiah"
+                        class="w-full h-full object-cover rounded-lg hover:scale-105 transition-all duration-500"
+                        loading="lazy" />
+                </div>
+
+                <!-- Text Section -->
+                <div class="space-y-6">
+                    <h2 class="text-3xl sm:text-4xl font-semibold text-blue-600 dark:text-blue-400">
+                        About Me
+                    </h2>
+                    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                        I am a detail-oriented and dynamic individual with a background in science and technology,
+                        paired with a deep passion for leadership. My journey has taken me from research to design and
+                        web development, allowing me to merge my critical scientific reasoning skills with creative
+                        problem-solving abilities.
+                    </p>
+                    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                        I'm always eager to learn and grow, applying technical web development knowledge to drive change
+                        and create innovative solutions. My goal is to bring fresh perspectives, adaptability, and a
+                        strong commitment to learning into every project.
+                    </p>
+
+                    <!-- CTA Button -->
+                    <div class="flex items-center space-x-4">
+                        <a href="./about.html"
+                            class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition duration-300 shadow-md">
+                            Learn More About Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="bg-white dark:bg-gray-800 py-12 sm:py-16 lg:py-20">
+        <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="mb-12 flex items-center justify-between gap-8 sm:mb-16 md:mb-20">
+                <div class="flex items-center gap-4">
+                    <h2
+                        class="text-3xl font-semibold text-blue-600 dark:text-blue-400 animate__animated animate__fadeIn animate__delay-1s">
+                        Featured Projects</h2>
+                </div>
+
+                <a href="./portfolio.html"
+                    class="inline-block rounded-lg bg-blue-600 dark:bg-gray-700 text-white px-6 py-3 text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 ease-in-out">
+                    More Projects
+                </a>
+            </div>
+
+            <!-- Grid Layout for Projects (2 columns on desktop) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <a href="./portfolio.html#lab-projects"
+                    class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
+                    <img src="./images/lab.jpg" alt="Lab Project"
+                        class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"
+                        loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">
+                        Lab Project</div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="./gallery.html"
+                    class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
+                    <img src="./images/gd.jpg" alt="Graphic Design"
+                        class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"
+                        loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">
+                        Graphic Design</div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="./portfolio.html#creative-projects"
+                    class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
+                    <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=1000"
+                        alt="Web Development"
+                        class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"
+                        loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">
+                        Web Development</div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="./portfolio.html#creative-projects"
+                    class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
+                    <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600"
+                        alt="Content Creation"
+                        class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"
+                        loading="lazy" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40">
+                    </div>
+                    <div
+                        class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">
+                        Content Creation</div>
+                </a>
+            </div>
+        </div>
     </div>
-  </section>
 
 
-  
-<section class="w-full h-full flex flex-col justify-center md:py-20 py-10 md:px-20 px-4 bg-gray-700 dark:bg-gray-900 overflow-hidden" id="services">
-    <!-- Heading -->
-    <div class="w-fit text-center mb-10">
-        <h2 class="text-2xl sm:text-4xl font-bold text-gray-900 dark:text-gray-200 pb-2">Services</h2>
-        <div class="w-32 h-1 mx-auto bg-gradient-to-r from-teal-400 to-indigo-500 rounded-full"></div>
-    </div>
+    <section class="bg-cover bg-gray-900 py-16" id="contact">
+        <div class="container mx-auto px-6 md:px-8 text-blue-600">
 
-    <div class="w-full grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 mt-8">
-        <!-- Web Development -->
-        <div class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-            <div class="bg-teal-600 text-white p-4 rounded-full mb-4 shadow-lg">
-                <i class="fas fa-laptop-code text-3xl"></i>
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                    Contact Me</h2>
+                <p class="text-lg text-gray-300">Feel free to reach out for inquiries, collaborations, or just to say
+                    hello!</p>
             </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Web Development</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-                Building scalable, performant, and secure web applications that meet modern standards.
-            </p>
+
+            <div class="flex flex-wrap justify-center gap-12">
+
+                <!-- Contact Form -->
+                <form id="contactForm"
+                    class="w-full md:w-1/2 lg:w-5/12 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:shadow-xl transition duration-300">
+                    <div class="mb-6">
+                        <label class="block text-lg font-medium text-blue-600 dark:text-blue-400"
+                            for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Your Name" required
+                            class="w-full px-4 py-2 border rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-lg font-medium text-blue-600 dark:text-blue-400"
+                            for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Your Email" required
+                            class="w-full px-4 py-2 border rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                    </div>
+
+                    <div class="mb-6">
+                        <label class="block text-lg font-medium text-blue-600 dark:text-blue-400"
+                            for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required
+                            class="w-full px-4 py-2 border rounded-md text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-400 h-40"></textarea>
+                    </div>
+
+                    <!-- Status Message (hidden by default) -->
+                    <div id="formResponse" class="mb-4 hidden">
+                        <p id="formResponseText" class="text-sm px-4 py-2 rounded"></p>
+                    </div>
+
+                    <button type="submit" id="submitButton"
+                        class="w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none transition duration-200 ease-in-out flex justify-center items-center">
+                        <span id="buttonText">Send Message</span>
+                        <svg id="spinner" class="hidden w-5 h-5 ml-2 text-white animate-spin"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                            </circle>
+                            <path class="opacity-75" fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                            </path>
+                        </svg>
+                    </button>
+                </form><!-- Contact Details -->
+                <div
+                    class="w-full md:w-1/2 lg:w-5/12 p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border-2 border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+                    <div class="space-y-8">
+                        <!-- Call Me -->
+                        <div class="group">
+                            <div class="flex items-center space-x-3 mb-2">
+                                <div class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full group-hover:animate-pulse">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6 text-blue-600 dark:text-blue-400" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">Call Me</h3>
+                            </div>
+                            <div class="pl-11 space-y-1">
+                                <p
+                                    class="text-lg text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path
+                                            d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                                    </svg>
+                                    steveapp531@gmail.com
+                                </p>
+                                <p
+                                    class="text-lg text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 flex items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20"
+                                        fill="currentColor">
+                                        <path fill-rule="evenodd"
+                                            d="M7 2a2 2 0 00-2 2v12a2 2 0 002 2h6a2 2 0 002-2V4a2 2 0 00-2-2H7zm3 14a1 1 0 100-2 1 1 0 000 2z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                    +233 55 715 1636
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Social Media Links -->
+                        <div class="space-y-6">
+                            <!-- Twitter -->
+                            <div class="group transform hover:scale-[1.02] transition-transform duration-300">
+                                <a href="https://twitter.com/steveapp_" target="_blank"
+                                    class="flex items-center space-x-3">
+                                    <div
+                                        class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="h-6 w-6 text-blue-600 dark:text-blue-400" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">X/Twitter
+                                        </h3>
+                                        <p
+                                            class="text-lg text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                            @steveapp_</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- LinkedIn -->
+                            <div class="group transform hover:scale-[1.02] transition-transform duration-300">
+                                <a href="https://www.linkedin.com/in/stephenappiahdwumfour/" target="_blank"
+                                    class="flex items-center space-x-3">
+                                    <div
+                                        class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="h-6 w-6 text-blue-600 dark:text-blue-400" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">LinkedIn</h3>
+                                        <p
+                                            class="text-lg text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                            Stephen Appiah Dwumfour</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- GitHub -->
+                            <div class="group transform hover:scale-[1.02] transition-transform duration-300">
+                                <a href="https://github.com/steveapp531" target="_blank"
+                                    class="flex items-center space-x-3">
+                                    <div
+                                        class="bg-blue-100 dark:bg-blue-900 p-2 rounded-full group-hover:bg-blue-200 dark:group-hover:bg-blue-800 transition-colors duration-300">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                            class="h-6 w-6 text-blue-600 dark:text-blue-400" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400">GitHub</h3>
+                                        <p
+                                            class="text-lg text-gray-600 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                                            steveapp531</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Graphic Design -->
-        <div class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-            <div class="bg-indigo-600 text-white p-4 rounded-full mb-4 shadow-lg">
-                <i class="fas fa-paint-brush text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Graphic Design</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-                Designing visually engaging interfaces that balance creativity and usability.
-            </p>
-        </div>
-
-        <!-- Content Creation -->
-        <div class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-            <div class="bg-blue-600 text-white p-4 rounded-full mb-4 shadow-lg">
-                <i class="fas fa-edit text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Content Creation</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-                Writing and creating optimized content that enhances brand presence and drives engagement.
-            </p>
-        </div>
-
-        <!-- Video Editing -->
-        <div class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-            <div class="bg-purple-600 text-white p-4 rounded-full mb-4 shadow-lg">
-                <i class="fas fa-video text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Video Editing</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-                Editing and producing high-quality video content for various platforms.
-            </p>
-        </div>
-
-        <!-- Academic Research -->
-        <div class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-            <div class="bg-orange-600 text-white p-4 rounded-full mb-4 shadow-lg">
-                <i class="fas fa-book-reader text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Academic Research</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-                Offering expert support and tools to enhance academic research efficiency and outcomes.
-            </p>
-        </div>
-
-        <!-- Laboratory Services -->
-        <div class="flex flex-col items-center justify-center bg-white dark:bg-gray-800 p-6 rounded-xl shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105">
-            <div class="bg-teal-500 text-white p-4 rounded-full mb-4 shadow-lg">
-                <i class="fas fa-flask text-3xl"></i>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">Laboratory Services</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-center">
-                Providing scientific research and laboratory experiment support with precision and expertise.
-            </p>
-        </div>
-    </div>
-</section>
+    </section>
 
 
+    <section class="bg-gray-900 dark:bg-gray-800 py-16" id="blogs">
+        <div class="container mx-auto px-6 text-blue-600">
 
-<section id="about" class="bg-gray-100 dark:bg-gray-800 py-20">
-    <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 gap-10 items-center">
-            <!-- Image -->
-            <div class="relative overflow-hidden rounded-lg shadow-xl">
-                <img 
-                    src="./images/about.png" 
-                    alt="Stephen Appiah" 
-                    class="w-full h-full object-cover rounded-lg hover:scale-105 transition-all duration-500"
-                />
-            </div>
-
-            <!-- Text Section -->
-            <div class="space-y-6">
-                <h2 class="text-3xl sm:text-4xl font-semibold text-blue-600 dark:text-blue-400">
-                    About Me
+            <!-- Blogs Header -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">Blogs
                 </h2>
-                <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                    I am a detail-oriented and dynamic individual with a background in science and technology, paired with a deep passion for leadership. My journey has taken me from research to design and web development, allowing me to merge my critical scientific reasoning skills with creative problem-solving abilities.
-                </p>
-                <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                    I'm always eager to learn and grow, applying technical web development knowledge to drive change and create innovative solutions. My goal is to bring fresh perspectives, adaptability, and a strong commitment to learning into every project.
-                </p>
-
-                <!-- CTA Button -->
-                <div class="flex items-center space-x-4">
-                    <a href="./about.html" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition duration-300 shadow-md">
-                        Learn More About Me
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="bg-white dark:bg-gray-800 py-12 sm:py-16 lg:py-20">
-    <div class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <!-- Section Header -->
-        <div class="mb-12 flex items-center justify-between gap-8 sm:mb-16 md:mb-20">
-            <div class="flex items-center gap-4">
-                <h2 class="text-3xl font-semibold text-blue-600 dark:text-blue-400 animate__animated animate__fadeIn animate__delay-1s">Featured Projects</h2>
+                <p class="text-lg text-gray-300">Explore my latest blog posts, articles, and insights on development and
+                    life!</p>
             </div>
 
-            <a  href="./portfolio.html"
-                class="inline-block rounded-lg bg-blue-600 dark:bg-gray-700 text-white px-6 py-3 text-lg font-semibold hover:bg-blue-700 transition-all duration-300 transform hover:scale-105 ease-in-out">
-                More Projects
-            </a>
-        </div>
+            <!-- Blog Cards -->
+            <div class="sm:grid lg:grid-cols-3 sm:grid-cols-1 gap-10">
 
-        <!-- Grid Layout for Projects (2 columns on desktop) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            <!-- Project 1 -->
-            <a href="./portfolio.html#lab-projects" class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
-                <img src="./images/lab.jpg" alt="Lab Project" class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
-                <div class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">Lab Project</div>
-            </a>
-
-            <!-- Project 2 -->
-            <a href="./gallery.html" 
-                class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
-                <img src="./images/gd.jpg" alt="Graphic Design" class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
-                <div class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">Graphic Design</div>
-            </a>
-
-            <!-- Project 3 -->
-            <a href="./portfolio.html#creative-projects" 
-                class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
-                <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=1000" 
-                    alt="Web Development" class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
-                <div class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">Web Development</div>
-            </a>
-
-            <!-- Project 4 -->
-            <a href="./portfolio.html#creative-projects" class="relative group block rounded-lg overflow-hidden shadow-xl hover:scale-105 transform transition duration-300 hover:shadow-2xl hover:translate-y-4">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" 
-                    alt="Content Creation" class="w-full h-60 object-cover object-center transition duration-500 transform group-hover:scale-110 group-hover:rotate-2"/>
-                <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-40"></div>
-                <div class="absolute bottom-4 left-4 text-white text-xl font-bold transform scale-95 group-hover:scale-100 transition-all duration-200">Content Creation</div>
-            </a>
-        </div>
-    </div>
-</div>
-
-
-<section class="bg-cover bg-gray-900 py-16" id="contact">
-    <div class="container mx-auto px-6 md:px-8 text-blue-600">
-
-        <!-- Section Header -->
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">Contact Me</h2>
-            <p class="text-lg text-gray-300">Feel free to reach out for inquiries, collaborations, or just to say hello!</p>
-        </div>
-
-        <div class="flex flex-wrap justify-center gap-12">
-
-            <!-- Contact Form -->
-            <form class="w-full md:w-1/2 lg:w-5/12 p-6 bg-white rounded-lg shadow-lg border-2 border-gray-200 hover:shadow-xl transition duration-300">
-                
-                <div class="mb-6">
-                    <label class="block text-lg font-medium text-blue-600" for="name">Name</label>
-                    <input type="text" id="name" placeholder="Your Name" class="w-full px-4 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                </div>
-
-                <div class="mb-6">
-                    <label class="block text-lg font-medium text-blue-600" for="email">Email</label>
-                    <input type="email" id="email" placeholder="Your Email" class="w-full px-4 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-                </div>
-
-                <div class="mb-6">
-                    <label class="block text-lg font-medium text-blue-600" for="message">Message</label>
-                    <textarea id="message" placeholder="Your Message" class="w-full px-4 py-2 border rounded-md text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-400 h-40"></textarea>
-                </div>
-
-                <button type="submit" class="w-full py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 focus:outline-none transition duration-200 ease-in-out">Send Message</button>
-            </form>
-
-            <!-- Contact Details -->
-            <div class="w-full md:w-1/2 lg:w-5/12 p-6 bg-white rounded-lg shadow-lg border-2 border-gray-200 hover:shadow-xl transition duration-300">
-                <div class="space-y-8">
-                    <!-- Call Me -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-blue-600">Call Me</h3>
-                        <p class="text-lg text-gray-600">steveapp531@gmail.com</p>
-                        <p class="text-lg text-gray-600">+233 55 715 1636</p>
-                    </div>
-
-                    <!-- X/Twitter -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-blue-600">X/Twitter</h3>
-                        <p class="text-lg text-gray-600">
-                            <a href="https://twitter.com/steveapp_" class="text-blue-600 hover:underline">Profile</a>
-                        </p>
-                    </div>
-
-                    <!-- LinkedIn -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-blue-600">LinkedIn</h3>
-                        <p class="text-lg text-gray-600">
-                            <a href="https://www.linkedin.com/in/stephenappiahdwumfour/" class="text-blue-600 hover:underline">Profile</a>
-                        </p>
-                    </div>
-
-                    <!-- GitHub -->
-                    <div>
-                        <h3 class="text-xl font-semibold text-blue-600">GitHub</h3>
-                        <p class="text-lg text-gray-600">
-                            <a href="https://github.com/steveapp531" class="text-blue-600 hover:underline">Profile</a>
-                        </p>
+                <!-- Blog 1 -->
+                <div
+                    class="hover:bg-blue-800 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-900 mb-8">
+                    <div class="py-4 px-8">
+                        <img src="./images/144724188.png" class="rounded-full h-12 w-12 mb-4" loading="lazy">
+                        <a href="#">
+                            <h4 class="text-lg mb-3 font-semibold text-blue-600">The Privacy Policy You Never Read—But
+                                Definitely Should!</h4>
+                        </a>
+                        <p class="mb-2 text-sm text-gray-600 hover:text-gray-300">Privacy is not an option, and it
+                            shouldn't be the price we accept for just getting on the Internet. Security is always
+                            excessive until it's not enough.</p>
+                        <a href="./blog.html"><img src="./images/blog1.jpg" class="w-full rounded-md"></a>
+                        <hr class="mt-4" loading="lazy">
+                        <span class="text-xs text-blue-600">ARTICLE</span>&nbsp;<span
+                            class="text-xs text-gray-500">PROCESS</span>
                     </div>
                 </div>
+
+                <!-- Blog 2 -->
+                <div
+                    class="hover:bg-blue-800 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-900 mb-8">
+                    <div class="py-4 px-8">
+                        <img src="./images/144724188.png" class="rounded-full h-12 w-12 mb-4" loading="lazy">
+                        <a href="#">
+                            <h4 class="text-lg mb-3 font-semibold text-blue-600">How to be effective as a Web
+                                Dev-Avoiding the Cobra Effect?</h4>
+                        </a>
+                        <p class="mb-2 text-sm text-gray-600 hover:text-gray-300">The Cobra Effect reveals a profound
+                            truth: good intentions are not enough. To navigate life wisely, we must think critically and
+                            anticipate consequences.</p>
+                        <a
+                            href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k"><img
+                                src="./images/cobra.jpg" class="w-full rounded-md" loading="lazy"></a>
+                        <hr class="mt-4">
+                        <span class="text-xs text-blue-600">ARTICLE</span>&nbsp;<span
+                            class="text-xs text-gray-500">PROCESS</span>
+                    </div>
+                </div>
+
+                <!-- Blog 3 -->
+                <div
+                    class="hover:bg-blue-800 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-900 mb-8">
+                    <div class="py-4 px-8">
+                        <img src="./images/144724188.png" class="rounded-full h-12 w-12 mb-4" loading="lazy">
+                        <a href="#">
+                            <h4 class="text-lg mb-3 font-semibold text-blue-600">No Stack to Full Stack: My Journey as a
+                                Web Developer</h4>
+                        </a>
+                        <p class="mb-2 text-sm text-gray-600 hover:text-gray-300">I design and build digital experiences
+                            that make life simpler—but my journey was nothing close to simple. From no coding skills to
+                            full stack development.</p>
+                        <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500"
+                            class="w-full rounded-md" loading="lazy">
+                        <hr class="mt-4">
+                        <span class="text-xs text-blue-600">ARTICLE</span>&nbsp;<span
+                            class="text-xs text-gray-500">PROCESS</span>
+                    </div>
+                </div>
+
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-
-<section class="bg-gray-900 dark:bg-gray-800 py-16" id="blogs">
-    <div class="container mx-auto px-6 text-blue-600">
-
-        <!-- Blogs Header -->
-        <div class="text-center mb-16">
-            <h2 class="text-4xl font-bold text-white mb-4 animate__animated animate__fadeIn animate__delay-1s">Blogs</h2>
-            <p class="text-lg text-gray-300">Explore my latest blog posts, articles, and insights on development and life!</p>
-        </div>
-
-        <!-- Blog Cards -->
-        <div class="sm:grid lg:grid-cols-3 sm:grid-cols-1 gap-10">
-
-            <!-- Blog 1 -->
-            <div class="hover:bg-blue-800 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-900 mb-8"> 
-                <div class="py-4 px-8">
-                    <img src="./images/144724188.png" class="rounded-full h-12 w-12 mb-4">
-                    <a href="#">
-                        <h4 class="text-lg mb-3 font-semibold text-blue-600">The Privacy Policy You Never Read—But Definitely Should!</h4>
-                    </a>
-                    <p class="mb-2 text-sm text-gray-600 hover:text-gray-300">Privacy is not an option, and it shouldn't be the price we accept for just getting on the Internet. Security is always excessive until it's not enough.</p>
-                    <a href="./blog.html"><img src="./images/blog1.jpg" class="w-full rounded-md"></a>
-                    <hr class="mt-4">
-                    <span class="text-xs text-blue-600">ARTICLE</span>&nbsp;<span class="text-xs text-gray-500">PROCESS</span>
-                </div>
-            </div>
-
-            <!-- Blog 2 -->
-            <div class="hover:bg-blue-800 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-900 mb-8">
-                <div class="py-4 px-8">
-                    <img src="./images/144724188.png" class="rounded-full h-12 w-12 mb-4">
-                    <a href="#">
-                        <h4 class="text-lg mb-3 font-semibold text-blue-600">How to be effective as a Web Dev-Avoiding the Cobra Effect?</h4>
-                    </a>
-                    <p class="mb-2 text-sm text-gray-600 hover:text-gray-300">The Cobra Effect reveals a profound truth: good intentions are not enough. To navigate life wisely, we must think critically and anticipate consequences.</p>
-                    <a href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k"><img src="./images/cobra.jpg" class="w-full rounded-md"></a>
-                    <hr class="mt-4">
-                    <span class="text-xs text-blue-600">ARTICLE</span>&nbsp;<span class="text-xs text-gray-500">PROCESS</span>
-                </div>
-            </div>
-
-            <!-- Blog 3 -->
-            <div class="hover:bg-blue-800 hover:text-white transition duration-300 max-w-sm rounded overflow-hidden shadow-lg bg-white dark:bg-gray-900 mb-8">
-                <div class="py-4 px-8">
-                    <img src="./images/144724188.png" class="rounded-full h-12 w-12 mb-4">
-                    <a href="#">
-                        <h4 class="text-lg mb-3 font-semibold text-blue-600">No Stack to Full Stack: My Journey as a Web Developer</h4>
-                    </a>
-                    <p class="mb-2 text-sm text-gray-600 hover:text-gray-300">I design and build digital experiences that make life simpler—but my journey was nothing close to simple. From no coding skills to full stack development.</p>
-                    <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" class="w-full rounded-md">
-                    <hr class="mt-4">
-                    <span class="text-xs text-blue-600">ARTICLE</span>&nbsp;<span class="text-xs text-gray-500">PROCESS</span>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-    
 </body>
 
 <footer class="bg-gray-900 text-blue-600 py-6">

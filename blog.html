@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stephen Appiah - Blog</title>
+    <script src="./blog.js" defer></script>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
     <script>
+    
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -40,16 +44,19 @@
         .blog-card {
             transition: all 0.3s ease;
         }
+
         .blog-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
+
         .gradient-text {
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             background-image: linear-gradient(to right, #3b82f6, #2563eb);
         }
+
         .reading-time:after {
             content: " min read";
         }
@@ -64,21 +71,30 @@
                 <div class="flex justify-between items-center h-16">
                     <!-- Logo -->
                     <div class="flex-shrink-0">
-                        <a href="./index.html" class="lg:text-xl md:text-lg text-sm font-bold text-gray-700 dark:text-white capitalize">
-                            <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_1.9s_linear_infinite]">S</span>
-                            <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2s_linear_infinite]">t</span>
-                            <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.1s_linear_infinite]">e</span>
-                            <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.21s_linear_infinite]">p</span>
-                            <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.3s_linear_infinite]">h</span>
-                            <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">e</span>
-                            <span class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">n</span>
+                        <a href="./index.html"
+                            class="lg:text-xl md:text-lg text-sm font-bold text-gray-700 dark:text-white capitalize">
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_1.9s_linear_infinite]">S</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2s_linear_infinite]">t</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.1s_linear_infinite]">e</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.21s_linear_infinite]">p</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.3s_linear_infinite]">h</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">e</span>
+                            <span
+                                class="px-1 bg-blue-400 dark:bg-blue-600 rounded-full animate-[ping_2.4s_linear_infinite]">n</span>
                         </a>
                     </div>
 
                     <!-- Desktop Menu -->
                     <div class="hidden md:flex space-x-8 text-gray-400 dark:text-gray-700">
                         <a href="./index.html" class="hover:text-blue-400 dark:hover:text-blue-600">Home</a>
-                        <a href="./index.html#services" class="hover:text-blue-400 dark:hover:text-blue-600">Services</a>
+                        <a href="./index.html#services"
+                            class="hover:text-blue-400 dark:hover:text-blue-600">Services</a>
                         <a href="./portfolio.html" class="hover:text-blue-400 dark:hover:text-blue-600">Portfolio</a>
                         <a href="./blog.html" class="text-blue-400 dark:text-blue-600">Blog</a>
                         <a href="./index.html#contact" class="hover:text-blue-400 dark:hover:text-blue-600">Contact</a>
@@ -86,9 +102,12 @@
 
                     <!-- Mobile Menu Button -->
                     <div class="md:hidden flex items-center">
-                        <button id="mobile-menu-button" class="text-blue-400 dark:text-blue-600 hover:text-blue-600 focus:outline-none">
-                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                        <button id="mobile-menu-button"
+                            class="text-blue-400 dark:text-blue-600 hover:text-blue-600 focus:outline-none">
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h16m-7 6h7" />
                             </svg>
                         </button>
                     </div>
@@ -99,10 +118,13 @@
             <div id="mobile-menu" class="hidden bg-[#111111] dark:bg-white">
                 <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                     <a href="./index.html" class="block px-3 py-2 text-blue-400 dark:text-blue-600">Home</a>
-                    <a href="./index.html#services" class="block px-3 py-2 hover:text-blue-400 dark:hover:text-blue-600">Services</a>
-                    <a href="./portfolio.html" class="block px-3 py-2 hover:text-blue-400 dark:hover:text-blue-600">Portfolio</a>
+                    <a href="./index.html#services"
+                        class="block px-3 py-2 hover:text-blue-400 dark:hover:text-blue-600">Services</a>
+                    <a href="./portfolio.html"
+                        class="block px-3 py-2 hover:text-blue-400 dark:hover:text-blue-600">Portfolio</a>
                     <a href="./blog.html" class="block px-3 py-2 hover:text-blue-400 dark:hover:text-blue-600">Blog</a>
-                    <a href="./index.html#contact" class="block px-3 py-2 hover:text-blue-400 dark:hover:text-blue-600">Contact</a>
+                    <a href="./index.html#contact"
+                        class="block px-3 py-2 hover:text-blue-400 dark:hover:text-blue-600">Contact</a>
                 </div>
             </div>
         </nav>
@@ -110,18 +132,22 @@
 
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-gray-100 to-gray-300 dark:from-gray-800 dark:to-gray-900 py-20">
-        <div class="absolute inset-0 opacity-20 dark:opacity-30 bg-[url('./images/blog1.jpg')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 opacity-20 dark:opacity-30 bg-[url('./images/blog1.jpg')] bg-cover bg-center">
+        </div>
         <div class="container mx-auto px-6 relative z-10">
             <div class="text-center max-w-3xl mx-auto">
-                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6 animate-fade-in">My Blog</h1>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6 animate-fade-in">My Blog
+                </h1>
                 <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
                     Insights, stories, and lessons from my journey in tech, design, and life.
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="#latest-posts" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition duration-300">
+                    <a href="#latest-posts"
+                        class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg transition duration-300">
                         Latest Posts
                     </a>
-                    <a href="#popular-topics" class="px-6 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded-lg transition duration-300">
+                    <a href="#popular-topics"
+                        class="px-6 py-3 border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white rounded-lg transition duration-300">
                         Popular Topics
                     </a>
                 </div>
@@ -147,8 +173,11 @@
                 <div class="blog-card bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
                     <a href="#">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="./images/blog1.jpg" alt="Privacy Policy Blog" class="w-full h-full object-cover transition duration-700 hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <img src="./images/blog1.jpg" alt="Privacy Policy Blog"
+                                class="w-full h-full object-cover transition duration-700 hover:scale-110"
+                                loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                            </div>
                             <div class="absolute top-4 left-4">
                                 <span class="px-3 py-1 bg-blue-500 text-white rounded-full text-xs">Security</span>
                             </div>
@@ -156,26 +185,30 @@
                     </a>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <img src="./images/144724188.png" class="rounded-full h-10 w-10 mr-3">
+                            <img src="./images/144724188.png" class="rounded-full h-10 w-10 mr-3" loading="lazy">
                             <div>
                                 <p class="text-sm font-medium text-gray-800 dark:text-gray-200">Stephen Appiah</p>
                                 <p class="text-xs text-gray-500">May 15, 2023 • <span class="reading-time">5</span></p>
                             </div>
                         </div>
                         <a href="#">
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3 hover:text-blue-500 transition duration-300">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 dark:text-white mb-3 hover:text-blue-500 transition duration-300">
                                 The Privacy Policy You Never Read—But Definitely Should!
                             </h3>
                         </a>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Privacy is not an option, and it shouldn't be the price we accept for just getting on the Internet. Security is always excessive until it's not enough.
+                            Privacy is not an option, and it shouldn't be the price we accept for just getting on the
+                            Internet. Security is always excessive until it's not enough.
                         </p>
                         <div class="flex justify-between items-center">
-                            <a href="#" class="text-blue-500 hover:text-blue-600 text-sm font-medium transition duration-300">
+                            <a href="#"
+                                class="text-blue-500 hover:text-blue-600 text-sm font-medium transition duration-300">
                                 Read More →
                             </a>
                             <div class="flex space-x-2">
-                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Privacy</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Privacy</span>
                             </div>
                         </div>
                     </div>
@@ -183,10 +216,14 @@
 
                 <!-- Blog 2 -->
                 <div class="blog-card bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
-                    <a href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k" target="_blank">
+                    <a href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k"
+                        target="_blank">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="./images/cobra.jpg" alt="Cobra Effect Blog" class="w-full h-full object-cover transition duration-700 hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <img src="./images/cobra.jpg" alt="Cobra Effect Blog"
+                                class="w-full h-full object-cover transition duration-700 hover:scale-110"
+                                loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                            </div>
                             <div class="absolute top-4 left-4">
                                 <span class="px-3 py-1 bg-blue-500 text-white rounded-full text-xs">Development</span>
                             </div>
@@ -194,27 +231,36 @@
                     </a>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <img src="./images/144724188.png" class="rounded-full h-10 w-10 mr-3">
+                            <img src="./images/144724188.png" class="rounded-full h-10 w-10 mr-3" loading="lazy">
                             <div>
                                 <p class="text-sm font-medium text-gray-800 dark:text-gray-200">Stephen Appiah</p>
-                                <p class="text-xs text-gray-500">April 28, 2023 • <span class="reading-time">7</span></p>
+                                <p class="text-xs text-gray-500">April 28, 2023 • <span class="reading-time">7</span>
+                                </p>
                             </div>
                         </div>
-                        <a href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k" target="_blank">
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3 hover:text-blue-500 transition duration-300">
+                        <a href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k"
+                            target="_blank">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 dark:text-white mb-3 hover:text-blue-500 transition duration-300">
                                 How to be Effective as a Web Dev - Avoiding the Cobra Effect
                             </h3>
                         </a>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            The Cobra Effect reveals a profound truth: good intentions are not enough. To navigate life wisely, we must think critically and anticipate consequences.
+                            The Cobra Effect reveals a profound truth: good intentions are not enough. To navigate life
+                            wisely, we must think critically and anticipate consequences.
                         </p>
                         <div class="flex justify-between items-center">
-                            <a href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k" target="_blank" class="text-blue-500 hover:text-blue-600 text-sm font-medium transition duration-300">
+                            <a href="https://www.linkedin.com/posts/stephenappiahdwumfour_so-in-the-19th-century-during-british-rule-activity-7286873334410088448-AaD0?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACmXUeUBiJQcEZDIYY0itOy4Z1T8ZSXuw6k"
+                                target="_blank"
+                                class="text-blue-500 hover:text-blue-600 text-sm font-medium transition duration-300">
                                 Read More →
                             </a>
                             <div class="flex space-x-2">
-                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Web Dev</span>
-                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Psychology</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Web
+                                    Dev</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Psychology</span>
                             </div>
                         </div>
                     </div>
@@ -224,8 +270,12 @@
                 <div class="blog-card bg-gray-50 dark:bg-gray-700 rounded-xl overflow-hidden shadow-lg">
                     <a href="#">
                         <div class="relative h-48 overflow-hidden">
-                            <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Web Dev Journey" class="w-full h-full object-cover transition duration-700 hover:scale-110">
-                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                            <img src="https://images.pexels.com/photos/461077/pexels-photo-461077.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                                alt="Web Dev Journey"
+                                class="w-full h-full object-cover transition duration-700 hover:scale-110"
+                                loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                            </div>
                             <div class="absolute top-4 left-4">
                                 <span class="px-3 py-1 bg-blue-500 text-white rounded-full text-xs">Journey</span>
                             </div>
@@ -233,27 +283,34 @@
                     </a>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <img src="./images/144724188.png" class="rounded-full h-10 w-10 mr-3">
+                            <img src="./images/144724188.png" class="rounded-full h-10 w-10 mr-3" loading="lazy">
                             <div>
                                 <p class="text-sm font-medium text-gray-800 dark:text-gray-200">Stephen Appiah</p>
-                                <p class="text-xs text-gray-500">March 10, 2023 • <span class="reading-time">10</span></p>
+                                <p class="text-xs text-gray-500">March 10, 2023 • <span class="reading-time">10</span>
+                                </p>
                             </div>
                         </div>
                         <a href="#">
-                            <h3 class="text-xl font-semibold text-gray-800 dark:text-white mb-3 hover:text-blue-500 transition duration-300">
+                            <h3
+                                class="text-xl font-semibold text-gray-800 dark:text-white mb-3 hover:text-blue-500 transition duration-300">
                                 No Stack to Full Stack: My Journey as a Web Developer
                             </h3>
                         </a>
                         <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            I design and build digital experiences that make life simpler—but my journey was nothing close to simple. From no coding skills to full stack development.
+                            I design and build digital experiences that make life simpler—but my journey was nothing
+                            close to simple. From no coding skills to full stack development.
                         </p>
                         <div class="flex justify-between items-center">
-                            <a href="#" class="text-blue-500 hover:text-blue-600 text-sm font-medium transition duration-300">
+                            <a href="#"
+                                class="text-blue-500 hover:text-blue-600 text-sm font-medium transition duration-300">
                                 Read More →
                             </a>
                             <div class="flex space-x-2">
-                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Career</span>
-                                <span class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Web Dev</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Career</span>
+                                <span
+                                    class="px-2 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-xs">Web
+                                    Dev</span>
                             </div>
                         </div>
                     </div>
@@ -276,40 +333,50 @@
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                <a href="#" class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                <a href="#"
+                    class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+                    <div
+                        class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-laptop-code text-blue-500 dark:text-blue-400 text-2xl"></i>
                     </div>
                     <h3 class="font-semibold text-gray-800 dark:text-white">Web Development</h3>
                     <p class="text-sm text-gray-500 mt-1">12 Articles</p>
                 </a>
 
-                <a href="#" class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                <a href="#"
+                    class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+                    <div
+                        class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-shield-alt text-blue-500 dark:text-blue-400 text-2xl"></i>
                     </div>
                     <h3 class="font-semibold text-gray-800 dark:text-white">Security</h3>
                     <p class="text-sm text-gray-500 mt-1">8 Articles</p>
                 </a>
 
-                <a href="#" class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                <a href="#"
+                    class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+                    <div
+                        class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-flask text-blue-500 dark:text-blue-400 text-2xl"></i>
                     </div>
                     <h3 class="font-semibold text-gray-800 dark:text-white">Science</h3>
                     <p class="text-sm text-gray-500 mt-1">5 Articles</p>
                 </a>
 
-                <a href="#" class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                <a href="#"
+                    class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+                    <div
+                        class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-paint-brush text-blue-500 dark:text-blue-400 text-2xl"></i>
                     </div>
                     <h3 class="font-semibold text-gray-800 dark:text-white">Design</h3>
                     <p class="text-sm text-gray-500 mt-1">7 Articles</p>
                 </a>
 
-                <a href="#" class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
-                    <div class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                <a href="#"
+                    class="bg-white dark:bg-gray-700 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition duration-300">
+                    <div
+                        class="bg-blue-100 dark:bg-blue-900 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
                         <i class="fas fa-lightbulb text-blue-500 dark:text-blue-400 text-2xl"></i>
                     </div>
                     <h3 class="font-semibold text-gray-800 dark:text-white">Productivity</h3>
@@ -318,7 +385,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Newsletter Section -->
     <section class="py-16 bg-blue-600 dark:bg-blue-800 text-white">
         <div class="container mx-auto px-6">
@@ -327,13 +394,31 @@
                 <p class="text-xl mb-8">
                     Subscribe to my newsletter to receive new posts and insights directly to your inbox.
                 </p>
-                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
-                    <button type="submit" class="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
-                        Subscribe
+
+                <!-- Updated Form with ID -->
+                <form id="newsletterForm" class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" id="newsletterEmail" name="email" placeholder="Your email address" required
+                        class="flex-grow px-4 py-3 rounded-lg focus:outline-none text-gray-800">
+                    <button type="submit" id="subscribeButton"
+                        class="px-6 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition duration-300 flex justify-center items-center">
+                        <span id="buttonText">Subscribe</span>
+                        <svg id="spinner" class="hidden w-5 h-5 ml-2 text-blue-600 animate-spin"
+                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
+                            </circle>
+                            <path class="opacity-75" fill="currentColor"
+                                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z">
+                            </path>
+                        </svg>
                     </button>
                 </form>
-                <p class="text-sm mt-4 text-blue-100">
+
+                <!-- Response Message (hidden by default) -->
+                <div id="newsletterResponse" class="mt-4 hidden">
+                    <p id="responseMessage" class="text-sm px-4 py-2 rounded-lg"></p>
+                </div>
+
+                <p class="text-sm mt-2 text-blue-100">
                     No spam ever. Unsubscribe anytime.
                 </p>
             </div>
@@ -353,13 +438,16 @@
                     </p>
                 </div>
                 <div class="flex space-x-6">
-                    <a href="https://github.com/steveapp531" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                    <a href="https://github.com/steveapp531" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition duration-300">
                         <i class="fab fa-github text-2xl"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/stephenappiahdwumfour/" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                    <a href="https://www.linkedin.com/in/stephenappiahdwumfour/" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition duration-300">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
-                    <a href="https://twitter.com/steveapp_" target="_blank" class="text-gray-400 hover:text-blue-400 transition duration-300">
+                    <a href="https://twitter.com/steveapp_" target="_blank"
+                        class="text-gray-400 hover:text-blue-400 transition duration-300">
                         <i class="fab fa-twitter text-2xl"></i>
                     </a>
                 </div>
@@ -375,7 +463,7 @@
         // Mobile menu toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
@@ -390,4 +478,5 @@
         }
     </script>
 </body>
+
 </html>
